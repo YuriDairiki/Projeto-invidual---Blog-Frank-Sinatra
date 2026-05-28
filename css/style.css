@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    color: #c7a17a;
+}
+
+.logo span {
+    color: #888;
+    font-size: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #c7a17a;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4)),
+        url('../img/frank.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 650px;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-family: 'Cinzel', serif;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #d1d1d1;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 16px 35px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(to right, #6d4428, #c7a17a);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight: 600;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(199,161,122,0.3);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #c7a17a;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 120px 10%;
+    background: #111;
+}
+
+.sobre-texto {
+    max-width: 600px;
+}
+
+.sobre-texto h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-family: 'Cinzel', serif;
+    color: #c7a17a;
+}
+
+.sobre-texto p {
+    line-height: 1.9;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.sobre-imagem img {
+    width: 400px;
+    border-radius: 25px;
+    transition: 0.4s;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.sobre-imagem img:hover {
+    transform: scale(1.03);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 10%;
+    background: #0d0d0d;
+}
+
+.card {
+    background: linear-gradient(145deg, #171717, #111111);
+    padding: 35px;
+    border-radius: 25px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #c7a17a;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #c7a17a;
+    font-size: 24px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+.form-container,
+.quiz-container {
+    width: 420px;
+    margin: 140px auto;
+    background: #151515;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.form-container h1,
+.quiz-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #c7a17a;
+    font-family: 'Cinzel', serif;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.quiz-hero {
+    padding-top: 180px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.quiz-hero h1 {
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    color: #c7a17a;
+    margin-bottom: 20px;
+}
+
+.quiz-hero p {
+    color: #bbb;
+    font-size: 18px;
+}
+
+.quiz-area {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.quiz-card {
+    width: 900px;
+    background: #151515;
+    padding: 50px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.progress {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #6d4428, #c7a17a);
+    border-radius: 20px;
+}
+
+.pergunta {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #1c1c1c;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.pergunta:hover {
+    transform: translateY(-5px);
+    border: 1px solid #c7a17a;
+}
+
+.pergunta h2 {
+    margin-bottom: 20px;
+    color: #c7a17a;
+    font-size: 24px;
+}
+
+.pergunta label {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #242424;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pergunta label:hover {
+    background: #333;
+}
+
+#resultado {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #c7a17a;
+    font-weight: bold;
+}
